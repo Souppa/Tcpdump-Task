@@ -40,12 +40,3 @@ The DNS server's IP address was 203.0.113.2, and the port in question was port 5
 
 Note a likely cause of the incident:
 A likely cause of the incident is that there was no service listening on the DNS server's port 53, preventing the resolution of the domain name www.yummyrecipesforme.com. This could be due to a misconfiguration, service outage, or other issues with the DNS server. Further investigation would be needed to pinpoint the exact cause.
-
-
-
-
-
-
-
-
--Note a likely cause of the incident:
