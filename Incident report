@@ -1,0 +1,51 @@
+I am asked to provide a summary of the problem found in the DNS and ICMP traffic log.
+
+-The UDP protocols reveals that: 
+It was used to request a domain name resolution using the address of the DNS server over port 53.
+
+
+-This is based on the results of the network analysis, which show that the ICMP echo reply returned the error message:
+The ICMP response returned the error message "udp port 53 unreachable."
+
+
+-The port noted in the error message is used for:
+Port 53 is a well-known port for DNS service.
+
+
+-The most likely issue is:
+The most likely issue is that there was no service listening on the receiving DNS port (port 53) of the DNS server.
+
+
+-Time incident occurred: 
+The incident occured between these time stamps: 13:24:32.192571 -13:28:50.022967
+
+
+-Explain how the IT team became aware of the incident:
+The IT team became aware of the incident when several customers reported that they were unable to access the 
+company website www.yummyrecipesforme.com. As a cybersecurity analyst, you confirmed the issue by attempting 
+to access the website and encountering the error "destination port unreachable."
+
+
+-Explain the actions taken by the IT department to investigate the incident:
+The IT department used the network analyzer tool, tcpdump, to capture and analyze network traffic. 
+By examining the DNS and ICMP logs, they traced the issue to a UDP request for domain name resolution over port 53, which
+resulted in an ICMP error message indicating that the port was unreachable. The IT team then further investigated the issue to identify the cause.
+
+
+-Note key findings of the IT department's investigation (i.e., details related to the port affected, DNS server, etc.): 
+The issue was related to a UDP request for domain name resolution using the DNS server's IP address over port 53.
+The ICMP error message "udp port 53 unreachable" indicated that the DNS server's port was not reachable.
+The DNS server's IP address was 203.0.113.2, and the port in question was port 53, which is the well-known port for DNS service.
+
+
+Note a likely cause of the incident:
+A likely cause of the incident is that there was no service listening on the DNS server's port 53, preventing the resolution of the domain name www.yummyrecipesforme.com. This could be due to a misconfiguration, service outage, or other issues with the DNS server. Further investigation would be needed to pinpoint the exact cause.
+
+
+
+
+
+
+
+
+-Note a likely cause of the incident:
